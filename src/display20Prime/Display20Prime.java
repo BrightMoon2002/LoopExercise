@@ -1,10 +1,15 @@
 package display20Prime;
 
 
+import java.util.Scanner;
+
 public class Display20Prime {
     public static void main(String[] args) {
-        System.out.println("The app can display the first 20 Prime");
-        Prime(20);
+        System.out.println("The app can display the first number Prime which you want:");
+        Scanner inputNumber = new Scanner(System.in);
+        System.out.println("Enter number of Prime you want to display:");
+        int number = inputNumber.nextInt();
+        Prime(number);
 
     }
 
@@ -22,7 +27,7 @@ public class Display20Prime {
             }
             if (!flag) {
                 count++;
-                System.out.println(N);
+                System.out.print(N + ", ");
                 N++;
             } else {
                 N++;
